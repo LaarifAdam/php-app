@@ -7,7 +7,6 @@ include_once("config.php");
 $result = mysqli_query($mysqli, "SELECT * FROM students ORDER BY id DESC"); // using mysqli_query instead
 if (!$result) {
     printf("Error: %s\n", mysqli_error($con));
-    exit();
 }
 ?>
 
