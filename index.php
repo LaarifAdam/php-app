@@ -1,10 +1,7 @@
 <?php
-//including the database connection file
 include_once("config.php");
 
-//fetching data in descending order (lastest entry first)
-//$result = mysql_query("SELECT * FROM students ORDER BY id DESC"); // mysql_query is deprecated
-$result = mysqli_query($con, "SELECT * FROM students ORDER BY id DESC"); // using mysqli_query instead
+$result = mysqli_query($con, "SELECT * FROM students ORDER BY id DESC"); 
 if (!$result) {
     printf("Error: %s\n", mysqli_error($con));
 }
@@ -21,8 +18,7 @@ if (!$result) {
 
 <h3> Attribution des notes ! </h3>
 <ul>
-	<?php 
-	//while($res = mysql_fetch_array($result)) { // mysql_fetch_array is deprecated, we need to use mysqli_fetch_array 
+	<?php  
 	while($res = mysqli_fetch_array($result)) { 		
 		echo "<li><font color='blue'>".$res['name']. " </font>";
 		echo "vous avez eu <font color='blue'>".$res['grade']." </font>";

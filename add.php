@@ -1,11 +1,10 @@
 <html>
 <head>
-	<title>Add Data</title>
+	<title>Ajout d'une note</title>
 </head>
 
 <body>
 <?php
-//including the database connection file
 include_once("config.php");
 
 if(isset($_POST['Submit'])) {	
@@ -13,7 +12,6 @@ if(isset($_POST['Submit'])) {
 	$UE = mysqli_real_escape_string($con, $_POST['UE']);
 	$grade = mysqli_real_escape_string($con, $_POST['grade']);
 		
-	// checking empty fields
 	if(empty($name) || empty($UE) || empty($grade)) {
 				
 		if(empty($name)) {
@@ -28,11 +26,8 @@ if(isset($_POST['Submit'])) {
 			echo "<font color='red'>grade field is empty.</font><br/>";
 		}
 		
-		//link to the previous page
-		echo "<br/><a href='javascript:self.history.back();'>Go Back</a>";
+		echo "<br/><a href='javascript:self.history.back();'>Retour</a>";
 	} else { 
-		// if all the fields are filled (not empty) 
-			
 		//insert data to database	
 		$result = mysqli_query($con, "INSERT INTO students(name,UE,grade) VALUES('$name','$UE','$grade')");
 		
