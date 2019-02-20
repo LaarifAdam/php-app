@@ -1,9 +1,9 @@
 <?php
-$databaseHost = 'mysqlhost';
-$databaseName = 'test';
-$databaseUsername = 'root';
-$databasePassword = 'root';
+$db_h = 'mysqlhost';
+$db_n = 'test';
+$db_u = 'root';
+$db_p = 'root';
 
-$con = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName); 
+$con = mysqli_connect($db_h, $db_n, $db_u, $db_p); 
  
 ?>

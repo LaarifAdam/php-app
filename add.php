@@ -9,9 +9,9 @@
 include_once("config.php");
 
 if(isset($_POST['Submit'])) {	
-	$name = mysqli_real_escape_string($mysqli, $_POST['name']);
-	$UE = mysqli_real_escape_string($mysqli, $_POST['UE']);
-	$grade = mysqli_real_escape_string($mysqli, $_POST['grade']);
+	$name = mysqli_real_escape_string($con, $_POST['name']);
+	$UE = mysqli_real_escape_string($con, $_POST['UE']);
+	$grade = mysqli_real_escape_string($con, $_POST['grade']);
 		
 	// checking empty fields
 	if(empty($name) || empty($UE) || empty($grade)) {
