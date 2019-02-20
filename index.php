@@ -24,9 +24,9 @@ if (!$result) {
 	<?php 
 	//while($res = mysql_fetch_array($result)) { // mysql_fetch_array is deprecated, we need to use mysqli_fetch_array 
 	while($res = mysqli_fetch_array($result)) { 		
-		echo "<li>".$res['name'];
-		echo "vous avez eu ".$res['grade'];
-		echo "dans l'ue  ".$res['UE'];	
+		echo "<li><font color='blue'>".$res['name']. " </font>";
+		echo "vous avez eu <font color='blue'>".$res['grade']." </font>";
+		echo "dans l'ue  <font color='green'>".$res['UE']." </font>";	
 		echo "<a href=\"edit.php?id=$res[id]\">Edit</a> | <a href=\"delete.php?id=$res[id]\" onClick=\"return confirm('Veuillez confirmer la suppression.')\">Delete</a></td>";		
 	}
 	?>
