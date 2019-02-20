@@ -22,7 +22,6 @@ if (!$result) {
 <h3> Attribution des notes ! </h3>
 <ul>
 	<?php 
-	echo $result;
 	//while($res = mysql_fetch_array($result)) { // mysql_fetch_array is deprecated, we need to use mysqli_fetch_array 
 	while($res = mysqli_fetch_array($result)) { 		
 		echo "<li>".$res['name'];
