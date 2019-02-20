@@ -10,22 +10,22 @@ include_once("config.php");
 
 if(isset($_POST['Submit'])) {	
 	$name = mysqli_real_escape_string($mysqli, $_POST['name']);
-	$age = mysqli_real_escape_string($mysqli, $_POST['age']);
-	$email = mysqli_real_escape_string($mysqli, $_POST['email']);
+	$UE = mysqli_real_escape_string($mysqli, $_POST['UE']);
+	$grade = mysqli_real_escape_string($mysqli, $_POST['grade']);
 		
 	// checking empty fields
-	if(empty($name) || empty($age) || empty($email)) {
+	if(empty($name) || empty($UE) || empty($grade)) {
 				
 		if(empty($name)) {
 			echo "<font color='red'>Name field is empty.</font><br/>";
 		}
 		
-		if(empty($age)) {
-			echo "<font color='red'>Age field is empty.</font><br/>";
+		if(empty($UE)) {
+			echo "<font color='red'>UE field is empty.</font><br/>";
 		}
 		
-		if(empty($email)) {
-			echo "<font color='red'>Email field is empty.</font><br/>";
+		if(empty($grade)) {
+			echo "<font color='red'>grade field is empty.</font><br/>";
 		}
 		
 		//link to the previous page
@@ -34,11 +34,11 @@ if(isset($_POST['Submit'])) {
 		// if all the fields are filled (not empty) 
 			
 		//insert data to database	
-		$result = mysqli_query($mysqli, "INSERT INTO users(name,age,email) VALUES('$name','$age','$email')");
+		$result = mysqli_query($mysqli, "INSERT INTO students(name,UE,grade) VALUES('$name','$UE','$grade')");
 		
 		//display success message
-		echo "<font color='green'>Data added successfully.";
-		echo "<br/><a href='index.php'>View Result</a>";
+		echo "<font color='green'>Note attribué avec succées.";
+		echo "<br/><a href='index.php'>Voir le resultat</a>";
 	}
 }
 ?>
