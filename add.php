@@ -34,7 +34,7 @@ if(isset($_POST['Submit'])) {
 		// if all the fields are filled (not empty) 
 			
 		//insert data to database	
-		$result = mysqli_query($mysqli, "INSERT INTO students(name,UE,grade) VALUES('$name','$UE','$grade')");
+		$result = mysqli_query($con, "INSERT INTO students(name,UE,grade) VALUES('$name','$UE','$grade')");
 		
 		//display success message
 		echo "<font color='green'>Note attribué avec succées.";
