@@ -5,6 +5,10 @@ include_once("config.php");
 //fetching data in descending order (lastest entry first)
 //$result = mysql_query("SELECT * FROM students ORDER BY id DESC"); // mysql_query is deprecated
 $result = mysqli_query($mysqli, "SELECT * FROM students ORDER BY id DESC"); // using mysqli_query instead
+if (!$result) {
+    printf("Error: %s\n", mysqli_error($con));
+    exit();
+}
 ?>
 
 <html>
@@ -19,6 +23,7 @@ $result = mysqli_query($mysqli, "SELECT * FROM students ORDER BY id DESC"); // u
 <h3> Attribution des notes ! </h3>
 <ul>
 	<?php 
+	echo $result
 	//while($res = mysql_fetch_array($result)) { // mysql_fetch_array is deprecated, we need to use mysqli_fetch_array 
 	while($res = mysqli_fetch_array($result)) { 		
 		echo "<li>".$res['name'];
