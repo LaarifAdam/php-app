@@ -22,7 +22,7 @@ if (!$result) {
 	while($res = mysqli_fetch_array($result)) { 		
 		echo "<li><font color='blue'>".$res['name']. " </font>";
 		echo "vous avez eu <font color='green'>".$res['grade']." </font>";
-		echo "dans l'ue  <font color='blue'>".$res['UE']." </font>";	
+		echo "dans l'ue  <font color='red'>".$res['UE']." </font>";	
 		echo "<a href=\"edit.php?id=$res[id]\">Edit</a> | <a href=\"delete.php?id=$res[id]\" onClick=\"return confirm('Veuillez confirmer la suppression.')\">Delete</a></td>";		
 	}
 	?>
