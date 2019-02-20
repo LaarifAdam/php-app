@@ -1,0 +1,10 @@
+version: '2'
+services:
+    mysqlhost:
+        image: rboucenna/mysql-server
+    web:
+        image: rboucenna/myphpapp
+        ports:
+            - "8090:80"
+        
+ 
