@@ -13,7 +13,7 @@ if (!$result) {
 </head>
 
 <body>
-<h1> Demonstration pour Sophie ! </h1> 
+<h1> Démonstration pour Sophie ! </h1> 
 <a href="add.html">Ajouter de nouvelles notes</a><br/><br/>
 
 <h3> Attribution des notes ! </h3>
