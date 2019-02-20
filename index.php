@@ -18,12 +18,12 @@ if (!$result) {
 
 <body>
 <h1> Demonstration pour Sophie ! </h1> 
-<a href="add.html">Add New Data</a><br/><br/>
+<a href="add.html">Ajouter de nouvelles notes</a><br/><br/>
 
 <h3> Attribution des notes ! </h3>
 <ul>
 	<?php 
-	echo $result
+	echo $result;
 	//while($res = mysql_fetch_array($result)) { // mysql_fetch_array is deprecated, we need to use mysqli_fetch_array 
 	while($res = mysqli_fetch_array($result)) { 		
 		echo "<li>".$res['name'];
