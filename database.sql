@@ -10,6 +10,6 @@ CREATE TABLE `students` (
   PRIMARY KEY  (`id`)
 );
 
-INSERT INTO students VALUES ('0', 'laarif', 'STAT', 18);
-INSERT INTO students VALUES ('1', 'jlassi', 'PROBA', 19);
-INSERT INTO students VALUES ('2', 'schnell', 'ALGO', 18);
+INSERT INTO students VALUES ('1', 'laarif', 'STAT', 18);
+INSERT INTO students VALUES ('2', 'jlassi', 'PROBA', 19);
+INSERT INTO students VALUES ('3', 'schnell', 'ALGO', 18);
