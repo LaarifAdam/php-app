@@ -4,7 +4,6 @@ $databaseName = 'test';
 $databaseUsername = 'root';
 $databasePassword = 'root';
 
-$mysqli = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName); 
-echo $mysqli
+$con = mysqli_connect($databaseHost, $databaseUsername, $databasePassword, $databaseName); 
  
 ?>

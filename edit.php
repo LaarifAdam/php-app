@@ -5,11 +5,11 @@ include_once("config.php");
 if(isset($_POST['update']))
 {	
 
-	$id = mysqli_real_escape_string($mysqli, $_POST['id']);
+	$id = mysqli_real_escape_string($con, $_POST['id']);
 	
-	$name = mysqli_real_escape_string($mysqli, $_POST['name']);
-	$UE = mysqli_real_escape_string($mysqli, $_POST['UE']);
-	$grade = mysqli_real_escape_string($mysqli, $_POST['grade']);	
+	$name = mysqli_real_escape_string($con, $_POST['name']);
+	$UE = mysqli_real_escape_string($con, $_POST['UE']);
+	$grade = mysqli_real_escape_string($con, $_POST['grade']);	
 	
 	// checking empty fields
 	if(empty($name) || empty($UE) || empty($grade)) {	
@@ -27,7 +27,7 @@ if(isset($_POST['update']))
 		}		
 	} else {	
 		//updating the table
-		$result = mysqli_query($mysqli, "UPDATE students SET name='$name',UE='$UE',grade='$grade' WHERE id=$id");
+		$result = mysqli_query($con, "UPDATE students SET name='$name',UE='$UE',grade='$grade' WHERE id=$id");
 		
 		//redirectig to the display page. In our case, it is index.php
 		header("Location: index.php");
@@ -39,7 +39,7 @@ if(isset($_POST['update']))
 $id = $_GET['id'];
 
 //selecting data associated with this particular id
-$result = mysqli_query($mysqli, "SELECT * FROM students WHERE id=$id");
+$result = mysqli_query($con, "SELECT * FROM students WHERE id=$id");
 
 while($res = mysqli_fetch_array($result))
 {

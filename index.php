@@ -4,7 +4,7 @@ include_once("config.php");
 
 //fetching data in descending order (lastest entry first)
 //$result = mysql_query("SELECT * FROM students ORDER BY id DESC"); // mysql_query is deprecated
-$result = mysqli_query($mysqli, "SELECT * FROM students ORDER BY id DESC"); // using mysqli_query instead
+$result = mysqli_query($con, "SELECT * FROM students ORDER BY id DESC"); // using mysqli_query instead
 if (!$result) {
     printf("Error: %s\n", mysqli_error($con));
 }
